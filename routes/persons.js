@@ -9,9 +9,9 @@ const { personsController } = require('./../controllers/persons');
  *     Person:
  *       type: object
  *       required:
- *         - title
- *         - author
- *         - finished
+ *         - name
+ *         - document
+ *         - bithdate
  *       properties:
  *         _id:
  *           type: uuuid
@@ -41,7 +41,7 @@ const { personsController } = require('./../controllers/persons');
  *       example:
  *         _id: 656617ad984cf5d9fc4c879f
  *         name: Andrey Lemos
- *         document: 123.456.789-00
+ *         document: '12345678900'
  *         birthdate: 1995-20-09T00:01:06.000Z
  *         createdAt: 2020-01-10T00:01:06.000Z
  *         updatedAt: 2021-02-11T00:02:06.000Z
@@ -86,7 +86,7 @@ const { personsController } = require('./../controllers/persons');
  *     responses:
  *       200:
  *         description: The person response by id
- *         contens:
+ *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Person'
