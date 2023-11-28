@@ -7,12 +7,12 @@ const personsController = {
         personsModel.findOne({ document: req.params.id })  
         .then(data => {
           if(data){
-            returnService.sender(res,200,false,null,null,data);
+            returnService.sender(res, 200, false, null, null, data);
           }else{
-            returnService.sendError(res,404,'Pessoa não encontrada',null);
+            returnService.sendError(res, 404, 'Pessoa não encontrada', null);
           }
         }).catch(() => {
-          returnService.sendError(res,400,'Falha ao buscar pessoa',null);
+          returnService.sendError(res, 400, 'Falha ao buscar pessoa', null);
         });
 
     }
@@ -22,12 +22,12 @@ const personsController = {
     personsModel.find()  
     .then(data => {
         if(data){
-        returnService.sender(res,200,false,null,null,data);
+        returnService.sender(res, 200, false, null, null, data);
         }else{
-        returnService.sendError(res,404,'Pessoas não encontradas',null);
+        returnService.sendError(res, 404, 'Pessoas não encontradas', null);
         }
     }).catch(() => {
-        returnService.sendError(res,400,'Falha ao buscar pessoas',null);
+        returnService.sendError(res, 400, 'Falha ao buscar pessoas', null);
     });
   },
 };

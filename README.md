@@ -2,19 +2,32 @@
 
 API para retorno de pessoas.
 
-## Installation
+## Instalação
 
-Utilize o comando para instalar as dependencias
+Utilize o comando para instalar as dependências
 
 ```bash
 npm install
 ```
 
-## Usage
+## Como usar
 
-Acesse a API pelo seguinte endereço
+Utilize o comando abaixo para iniciar a aplicação
+
+```bash
+npm start
+```
+
+Acesse a documentação da API pelo seguinte endereço:
 
 ```bash
 http://localhost:3000/api-docs/#/
 ```
 As rotas disponíveis serão exibidas na documentação do Swagger.
+
+
+### Dependências
+
+- Express.JS
+- Swagger
+- Mongoose
