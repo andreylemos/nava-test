@@ -25,14 +25,14 @@ http://localhost:3000/api-docs/#/
 ```
 As rotas disponíveis serão exibidas na documentação do Swagger.
 
-
+### Testes Unitários
 Utilize o comando abaixo para executar os testes unitários
 
 ```bash
 npm test
 ```
 
-### Dependências
+## Dependências
 
 - Express.JS
 - Swagger
