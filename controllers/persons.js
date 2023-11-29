@@ -1,5 +1,6 @@
 const { personsModel } = require("./../models/persons");
 const { returnService } = require('./../utils/return');
+const { returnFields } = require('./../utils/returnFields');
 
 const personsController = {
   getPerson(req, res) {
@@ -7,12 +8,12 @@ const personsController = {
         personsModel.findOne({ document: req.params.id })  
         .then(data => {
           if(data){
-            returnService.sender(res, 200, false, null, null, data);
+            returnService.sender(res, 200, false, null, null, returnFields.selectFields(data, ["name", "document", "birthdate"]));
           }else{
             returnService.sendError(res, 404, 'Pessoa não encontrada', null);
           }
-        }).catch(() => {
-          returnService.sendError(res, 400, 'Falha ao buscar pessoa', null);
+        }).catch((e) => {
+          returnService.sendError(res, 500, 'Falha ao buscar pessoa', null);
         });
 
     }
@@ -22,12 +23,12 @@ const personsController = {
     personsModel.find()  
     .then(data => {
         if(data && data.length > 0){
-        returnService.sender(res, 200, false, null, null, data);
+          returnService.sender(res, 200, false, null, null, returnFields.selectFields(data, ["name", "document", "birthdate"]));
         }else{
-        returnService.sendError(res, 404, 'Pessoas não encontradas', null);
+          returnService.sendError(res, 404, 'Pessoas não encontradas', null);
         }
-    }).catch(() => {
-        returnService.sendError(res, 400, 'Falha ao buscar pessoas', null);
+    }).catch((e) => {
+        returnService.sendError(res, 500, 'Falha ao buscar pessoas', null);
     });
   },
 };
