@@ -1,0 +1,8 @@
+{
+    "notFoundOne": {
+        "message": "Pessoa não encontrada"
+    },
+    "notFoundList": {
+        "message": "Pessoas não encontradas"
+    }
+}

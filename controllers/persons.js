@@ -21,7 +21,7 @@ const personsController = {
   getAll(req, res) {
     personsModel.find()  
     .then(data => {
-        if(data){
+        if(data && data.length > 0){
         returnService.sender(res, 200, false, null, null, data);
         }else{
         returnService.sendError(res, 404, 'Pessoas não encontradas', null);

@@ -1,0 +1,14 @@
+{ 
+    "success": {
+        "statusCode": 200,
+        "headers": {
+            "content-type": "application/json"
+        }
+    },
+    "notFound": {
+        "statusCode": 404,
+        "headers": {
+            "content-type": "application/json"
+        }
+    }
+}

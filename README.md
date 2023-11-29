@@ -10,7 +10,7 @@ Utilize o comando para instalar as dependências
 npm install
 ```
 
-## Como usar
+## Como utilizar
 
 Utilize o comando abaixo para iniciar a aplicação
 
@@ -26,8 +26,17 @@ http://localhost:3000/api-docs/#/
 As rotas disponíveis serão exibidas na documentação do Swagger.
 
 
+Utilize o comando abaixo para executar os testes unitários
+
+```bash
+npm test
+```
+
 ### Dependências
 
 - Express.JS
 - Swagger
 - Mongoose
+- Supertest
+- Chai
+- Sinon

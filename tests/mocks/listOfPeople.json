@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "656617ad984cf5d9fc4c879f",
+    "name": "Andrey Lemos",
+    "document": "12345678900",
+    "birthdate": "1995-20-09T00:01:06.000Z",
+    "createdAt": "2020-01-10T00:01:06.000Z",
+    "deletedAt": "",
+    "updatedAt": ""
+  },
+  {
+    "_id": "65663c41302c0f89f27f2fd6",
+    "name": "Ricardo Calegaro",
+    "document": "98765432100",
+    "birthdate": "2000-10-10T00:01:06.000Z",
+    "createdAt": "2020-01-10T00:01:06.000Z",
+    "deletedAt": "",
+    "updatedAt": ""
+  }
+]
